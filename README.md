@@ -2,7 +2,7 @@
 
 🐳 Generic docker image for PHP applications that contains nvm for handling multiple Node.js versions dynamically
 
-[![Docker Badge](https://img.shields.io/docker/pulls/ocreaper/php-nvm)](https://hub.docker.com/r/ocreaper/php-nvm/) ![Static Badge](https://img.shields.io/badge/nvm-v0.40.0-blue)
+[![Docker Badge](https://img.shields.io/docker/pulls/ocreaper/php-nvm)](https://hub.docker.com/r/ocreaper/php-nvm/) ![Static Badge](https://img.shields.io/badge/nvm-v0.40.3-blue)
 
 
 | Tags | PHP version | Features |
