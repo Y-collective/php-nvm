@@ -11,4 +11,4 @@
 | 8.1  | 8.1         | ✅ Everything. |
 | 8.2  | 8.2         | ✅ Everything. |
 | 8.3  | 8.3         | ✅ Everything. |
-| 8.4  | 8.4         | ⚠️ Partial. Imagick is not yet supported. |
+| 8.4  | 8.4         | ✅ Everything. |
