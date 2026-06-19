@@ -1,4 +1,4 @@
-FROM php:8.2
+FROM --platform=$TARGETPLATFORM php:8.2
 
 # Add docker-php-extension-installer script
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
@@ -30,6 +30,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     exif \
     gd \
     intl \
+    mbstring \
     pdo_mysql \
     pdo_pgsql \
     pcntl \
@@ -41,5 +42,7 @@ ENV PATH ./vendor/bin:/composer/vendor/bin:/root/.composer/vendor/bin:/usr/local
 
 # Install NVM
 RUN touch ~/.bashrc
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-RUN export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
+RUN export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" \
+    && [ -s "$NVM_DIR/nvm.sh" ] \
+    && . "$NVM_DIR/nvm.sh"

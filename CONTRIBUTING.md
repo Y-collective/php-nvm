@@ -9,11 +9,11 @@ Before opening a Pull Request, please make sure that:
 - You are modifying or adding files in the correct version folder (e.g. `8.3/Dockerfile`)
 - Your PR **title follows the [Conventional Commits](https://www.conventionalcommits.org/) format** and includes a valid **scope**
     - ✅ Correct examples:
-        - `feat(8.4): add support for PHP 8.4`
+        - `feat(8.5): add support for PHP 8.5`
         - `fix(8.3): correct NVM install path`
         - `chore(8.3): update nvm version`
     - ❌ Invalid examples (missing scope or wrong format):
-        - `feat: add PHP 8.4` ← missing scope
+        - `feat: add PHP 8.5` ← missing scope
         - `fix php 8.3 image` ← not a conventional commit format
 
 > The `scope` must describe the context of the change, such as the PHP version (`8.0`, `8.3`, etc.) or a general target like `docker` or `ci`.
@@ -29,7 +29,7 @@ Before opening a Pull Request, please make sure that:
 
 - **Avoid modifying multiple PHP versions in a single PR** unless necessary
 - Keep version-specific differences minimal and well-documented in `README.md` if needed
-- If adding a new PHP version (e.g. `8.4`), use the closest previous version (e.g. `8.3`) as a starting point
+- If adding a new PHP version (e.g. `8.5`), use the closest previous version (e.g. `8.4`) as a starting point
 
 ## 🧪 CI Workflow
 
