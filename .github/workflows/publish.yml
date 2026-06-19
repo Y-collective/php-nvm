@@ -45,5 +45,5 @@ jobs:
         with:
           push: true
           context: ${{ matrix.php }}
-          tags: ycollective/php-nvm:${{ matrix.tag }}
+          tags: ycodigitalagency/php-nvm:${{ matrix.tag }}
           platforms: linux/amd64,linux/arm64

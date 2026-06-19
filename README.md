@@ -3,7 +3,7 @@
 🐳 **php-nvm** is a generic, lightweight Docker image for PHP applications that
 includes [NVM](https://github.com/nvm-sh/nvm), allowing dynamic management of multiple Node.js versions at runtime.
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/ycollective/php-nvm)](https://hub.docker.com/r/ycollective/php-nvm/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ycodigitalagency/php-nvm)](https://hub.docker.com/r/ycodigitalagency/php-nvm/)
 ![NVM Version](https://img.shields.io/badge/nvm-v0.40.5-blue)
 
 [![Last Build](https://github.com/Y-collective/php-nvm/actions/workflows/publish.yml/badge.svg?branch=master)](https://github.com/Y-collective/php-nvm/actions/workflows/publish.yml)
@@ -43,7 +43,7 @@ includes [NVM](https://github.com/nvm-sh/nvm), allowing dynamic management of mu
 ### 🐋 Example Dockerfile
 
 ```Dockerfile
-FROM ycollective/php-nvm:8.3
+FROM ycodigitalagency/php-nvm:8.3
 
 # Install Node.js 18 using NVM
 RUN source ~/.nvm/nvm.sh && \
@@ -60,7 +60,7 @@ RUN composer install
 ### 💻 Run it interactively
 
 ```sh
-docker run -it --rm ycollective/php-nvm:8.3 bash
+docker run -it --rm ycodigitalagency/php-nvm:8.3 bash
 ```
 
 ## 🤝 Contributing
