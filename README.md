@@ -36,6 +36,11 @@ includes [NVM](https://github.com/nvm-sh/nvm), allowing dynamic management of mu
 > ℹ️ Images include NVM (v0.40.5). The exact Node.js version is not preinstalled — use `nvm install` as needed in your
 > Dockerfile or entrypoint script.
 
+> 🔄 The images are rebuilt on every push to `master` and every Monday, so the updates of the official `php`
+> images (PHP security releases included) reach the tags without a code change. A rebuild can also be started
+> manually from the Actions tab (*Build and publish images* → *Run workflow*). PHP 8.0 and 8.1 are end of life:
+> their tags are still rebuilt, but they no longer receive PHP security fixes.
+
 ---
 
 ## 🧪 Usage

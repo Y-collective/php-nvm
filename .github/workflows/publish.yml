@@ -4,12 +4,17 @@ on:
   push:
     branches:
       - master
+  schedule:
+    # every Monday: picks up the updates of the official php images
+    - cron: "23 4 * * 1"
+  workflow_dispatch:
 
 jobs:
   docker:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         include:
           - tag: "8.5"
