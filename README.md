@@ -12,7 +12,7 @@ includes [NVM](https://github.com/nvm-sh/nvm), allowing dynamic management of mu
 
 ## 🚀 Features
 
-- ✅ PHP 8.x support (8.0–8.5)
+- ✅ PHP 8.x support (8.0–8.5, the end-of-life 8.0 tag is frozen)
 - ✅ Multi-arch images for `linux/amd64` and `linux/arm64` (Apple Silicon / M1 compatible)
 - ✅ Pre-installed [NVM](https://github.com/nvm-sh/nvm) for managing multiple Node.js versions
 - ✅ Ideal for modern full-stack PHP projects that require Node.js tooling (e.g. Webpack, Vite, etc.)
@@ -38,8 +38,10 @@ includes [NVM](https://github.com/nvm-sh/nvm), allowing dynamic management of mu
 
 > 🔄 The images are rebuilt on every push to `master` and every Monday, so the updates of the official `php`
 > images (PHP security releases included) reach the tags without a code change. A rebuild can also be started
-> manually from the Actions tab (*Build and publish images* → *Run workflow*). PHP 8.0 and 8.1 are end of life:
-> their tags are still rebuilt, but they no longer receive PHP security fixes.
+> manually from the Actions tab (*Build and publish images* → *Run workflow*). PHP 8.0 and 8.1 are end of life
+> and no longer receive PHP security fixes. The `8.1` tag is still rebuilt, but the `8.0` tag is frozen: its
+> Dockerfile no longer builds (the `apt update` step fails on the Debian 11 base image), so it is not part of the
+> build matrix anymore and stays at its last image (PHP 8.0.30, built on 2026-06-19), which is still on Docker Hub.
 
 ---
 
